@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/buttonNewEventUpdate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="28dp"
+    android:layout_marginTop="52dp"
+    android:text="@string/update_button_text"
+    android:onClick="onUpdateEvent"
+    app:layout_constraintStart_toEndOf="@+id/buttonNewEventCancel"
+    app:layout_constraintTop_toBottomOf="@+id/chipGroupPriority"
+
+    >
+
+</Button>

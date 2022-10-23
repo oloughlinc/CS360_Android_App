@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newEventConstraint"
+    android:layout_width="380dp"
+    android:layout_height="600dp"
+    tools:layout_editor_absoluteX="27dp"
+    tools:layout_editor_absoluteY="-2dp">
+
+
+    <TextView
+        android:id="@+id/textNewEventLabel"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/new_event_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNewEventDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/new_event_date_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewEventDesc" />
+
+    <Button
+        android:id="@+id/buttonNewEventCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/cancel_button_text"
+        android:onClick="onCancelClicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupPriority" />
+
+    <Button
+        android:id="@+id/buttonNewEventAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/add_button_text"
+        android:onClick="onAddEvent"
+        app:layout_constraintStart_toEndOf="@+id/buttonNewEventCancel"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupPriority" />
+
+    <TextView
+        android:id="@+id/textNewEventDescLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/new_event_desc_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewEventTitle" />
+
+    <TextView
+        android:id="@+id/textNewEventPriorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/new_event_priority_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupPriority"
+        android:layout_width="209dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewEventPriorityLabel">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPriorityLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="L"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="405dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPriorityMed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:checked="true"
+            android:text="M"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="405dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPriorityHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="H"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="405dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/new_event_date_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewEventDateLabel" />
+
+    <TextView
+        android:id="@+id/textNewEventTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/new_event_title_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewEventLabel" />
+
+    <EditText
+        android:id="@+id/editTextNewEventDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewEventDescLabel" />
+
+    <EditText
+        android:id="@+id/editTextNewEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/new_event_title_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewEventTitleLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationActivity"
+    tools:layout_editor_absoluteX="-43dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <TextView
+        android:id="@+id/textLabelNotificationSettingDesc"
+        android:layout_width="318dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/notification_setting_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelNotificationSetting" />
+
+    <TextView
+        android:id="@+id/textLabelNotificationSetting"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/notification_setting_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
